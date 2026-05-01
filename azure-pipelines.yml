@@ -1,0 +1,34 @@
+trigger: none
+
+schedules:
+- cron: "0 */6 * * *"
+  displayName: Sync GitHub repo to Azure Repos every 6 hours
+  branches:
+    include:
+    - main
+  always: true
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+- group: EngineeringPlaybookMirror
+
+steps:
+- checkout: none
+
+- bash: |
+    set -euo pipefail
+
+    echo "Mirroring GitHub repo into Azure Repos..."
+
+    AZURE_REPO_URL="https://$(System.AccessToken)@dev.azure.com/$(ADO_ORG)/$(ADO_PROJECT)/_git/$(ADO_REPO)"
+
+    git clone --mirror "$(GITHUB_REPO_URL)" repo.git
+    cd repo.git
+
+    git remote set-url --push origin "$AZURE_REPO_URL"
+    git push --mirror
+
+    echo "Mirror complete."
+  displayName: Mirror GitHub to Azure Repos
