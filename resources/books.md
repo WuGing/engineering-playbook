@@ -1,6 +1,9 @@
 This is broken into two sections: Technical and Leadership, with each section having multiple sub-sections: In-Progress - what I'm currently reading, Read - books that I recommend and reread, and To Read - books that I've determined I want to read based on recommendation or reference from other reading.
 
 # Technical
+## In-Progress
+- Domain-Driven Design
+
 ## Read
 These are books I've read and reread. 
 - Head First Design Patterns: Building Extensibile and Maintainable Object-Oriented Software 2nd Edition
@@ -24,12 +27,13 @@ This is reading from school I want to revisit
 
 # Leadership
 ## In-Progress
-- Staff Engineer: Leadership Beyond the Management Track
+- Find Your Why: A Practical Guide for Discovering Purpose for You and Your Team
 
 ## Read
 - Peopleware: Productive Projects and Teams
+- Staff Engineer: Leadership Beyond the Management Track
+- Start with Why: How Great Leaders Inspire Everyone to Take Action
 
 ## To Read
 - An Elegant Puzzle: Systems of Engineering Management
-- Start with Why: How Great Leaders Inspire Everyone to Take Action
 - Leaders Eat Last: Why Some Teams Pull Together and Others Don't
